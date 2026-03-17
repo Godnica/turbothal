@@ -1,0 +1,2 @@
+[console_scripts]
+cli-anything-activepieces = cli_anything.activepieces.activepieces_cli:main
