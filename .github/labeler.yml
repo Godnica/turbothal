@@ -1,0 +1,45 @@
+frontend:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/web/**"
+          - "packages/react-ui/**"
+
+backend:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/server/**"
+
+pieces:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/pieces/**"
+
+cli:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/cli/**"
+          - "agent-harness/**"
+
+shared:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/shared/**"
+
+tests:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/tests-e2e/**"
+
+devops:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "Dockerfile"
+          - "docker-compose*.yml"
+          - "deploy/**"
+          - ".github/**"
+
+docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "docs/**"
+          - "*.md"
