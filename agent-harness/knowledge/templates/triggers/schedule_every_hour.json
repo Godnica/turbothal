@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "description": "Trigger: ogni ora",
+    "piece": "@activepieces/piece-schedule",
+    "triggerName": "every_hour",
+    "tested": true,
+    "date": "2026-03-20"
+  },
+  "type": "UPDATE_TRIGGER",
+  "request": {
+    "name": "trigger",
+    "displayName": "Every Hour",
+    "valid": true,
+    "type": "PIECE_TRIGGER",
+    "settings": {
+      "pieceName": "@activepieces/piece-schedule",
+      "pieceVersion": "~0.1.17",
+      "pieceType": "OFFICIAL",
+      "packageType": "REGISTRY",
+      "triggerName": "every_hour",
+      "propertySettings": {},
+      "input": {},
+      "inputUiInfo": {}
+    }
+  }
+}

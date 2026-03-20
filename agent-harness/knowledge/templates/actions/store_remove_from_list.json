@@ -1,0 +1,16 @@
+{
+  "_meta": {"description":"Action: Remove item from store list","piece":"@activepieces/piece-store","actionName":"remove_from_list","tested":true,"date":"2026-03-20"},
+  "type": "ADD_ACTION",
+  "request": {
+    "parentStep": "trigger", "stepLocationRelativeToParent": "AFTER",
+    "action": {
+      "name": "step_1", "displayName": "Remove from List", "valid": true, "type": "PIECE",
+      "settings": {
+        "pieceName": "@activepieces/piece-store", "pieceVersion": "~0.6.14",
+        "pieceType": "OFFICIAL", "packageType": "REGISTRY", "actionName": "remove_from_list",
+        "propertySettings": {}, "input": {"key":"mylist","value":"item1","store_scope":"COLLECTION"},
+        "errorHandlingOptions": {"continueOnFailure":{"value":false},"retryOnFailure":{"value":false}}
+      }
+    }
+  }
+}

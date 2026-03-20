@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "description": "Trigger: Catch incoming HTTP webhook (any method)",
+    "type": "PIECE_TRIGGER",
+    "piece": "@activepieces/piece-webhook",
+    "triggerName": "catch_webhook",
+    "tested": true,
+    "date": "2026-03-20",
+    "notes": "MUST include authType in input or trigger will be valid:false and flow won't execute. Options: none, basic, header."
+  },
+  "type": "UPDATE_TRIGGER",
+  "request": {
+    "name": "trigger",
+    "displayName": "Catch Webhook",
+    "valid": true,
+    "type": "PIECE_TRIGGER",
+    "settings": {
+      "pieceName": "@activepieces/piece-webhook",
+      "pieceVersion": "~0.1.31",
+      "pieceType": "OFFICIAL",
+      "packageType": "REGISTRY",
+      "triggerName": "catch_webhook",
+      "propertySettings": {},
+      "input": {
+        "authType": "none"
+      },
+      "inputUiInfo": {}
+    }
+  }
+}

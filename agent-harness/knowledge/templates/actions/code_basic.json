@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "description": "Azione: esegui codice JavaScript custom",
+    "type": "CODE",
+    "tested": true,
+    "date": "2026-03-20"
+  },
+  "type": "ADD_ACTION",
+  "request": {
+    "parentStep": "trigger",
+    "stepLocationRelativeToParent": "AFTER",
+    "action": {
+      "name": "step_1",
+      "displayName": "Log Current Time",
+      "valid": true,
+      "type": "CODE",
+      "settings": {
+        "sourceCode": {
+          "code": "export const code = async (inputs) => {\n  return { timestamp: new Date().toISOString(), message: \"Hello from Activepieces!\" };\n};",
+          "packageJson": "{}"
+        },
+        "input": {},
+        "errorHandlingOptions": {
+          "continueOnFailure": { "value": false },
+          "retryOnFailure": { "value": false }
+        }
+      }
+    }
+  }
+}

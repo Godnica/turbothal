@@ -1,0 +1,12 @@
+{
+  "_meta": {"description":"Trigger: Custom cron expression","piece":"@activepieces/piece-schedule","triggerName":"cron_expression","tested":true,"date":"2026-03-20","required_input":["cronExpression","timezone"],"note":"Field is cronExpression NOT cron_expression"},
+  "type": "UPDATE_TRIGGER",
+  "request": {
+    "name": "trigger", "displayName": "Cron Every 6h", "valid": true, "type": "PIECE_TRIGGER",
+    "settings": {
+      "pieceName": "@activepieces/piece-schedule", "pieceVersion": "~0.1.17",
+      "pieceType": "OFFICIAL", "packageType": "REGISTRY", "triggerName": "cron_expression",
+      "propertySettings": {}, "input": {"cronExpression": "0 */6 * * *", "timezone": "Europe/Rome"}, "inputUiInfo": {}
+    }
+  }
+}

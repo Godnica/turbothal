@@ -1,0 +1,12 @@
+{
+  "_meta": {"description":"Trigger: Every X minutes","piece":"@activepieces/piece-schedule","triggerName":"every_x_minutes","tested":true,"date":"2026-03-20","required_input":["minutes"]},
+  "type": "UPDATE_TRIGGER",
+  "request": {
+    "name": "trigger", "displayName": "Every 5 Minutes", "valid": true, "type": "PIECE_TRIGGER",
+    "settings": {
+      "pieceName": "@activepieces/piece-schedule", "pieceVersion": "~0.1.17",
+      "pieceType": "OFFICIAL", "packageType": "REGISTRY", "triggerName": "every_x_minutes",
+      "propertySettings": {}, "input": {"minutes": 5}, "inputUiInfo": {}
+    }
+  }
+}

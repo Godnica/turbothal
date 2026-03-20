@@ -1,0 +1,18 @@
+{
+  "_meta": {"description":"Action: HTTP POST request with JSON body","piece":"@activepieces/piece-http","actionName":"send_request","tested":true,"date":"2026-03-20","note":"body_type=json, body.data is stringified JSON"},
+  "type": "ADD_ACTION",
+  "request": {
+    "parentStep": "trigger",
+    "stepLocationRelativeToParent": "AFTER",
+    "action": {
+      "name": "step_1", "displayName": "HTTP POST", "valid": true, "type": "PIECE",
+      "settings": {
+        "pieceName": "@activepieces/piece-http", "pieceVersion": "~0.11.7",
+        "pieceType": "OFFICIAL", "packageType": "REGISTRY", "actionName": "send_request",
+        "propertySettings": {},
+        "input": {"method":"POST","url":"https://httpbin.org/post","headers":{},"queryParams":{},"authType":"NONE","body_type":"json","body":{"data":"{\"hello\":\"world\"}"},"response_is_binary":false,"use_proxy":false,"followRedirects":true,"failureMode":"continue_none"},
+        "errorHandlingOptions": {"continueOnFailure":{"value":false},"retryOnFailure":{"value":false}}
+      }
+    }
+  }
+}

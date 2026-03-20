@@ -1,0 +1,61 @@
+{
+    "name": "Test Flow",
+    "type": "SHARED",
+    "summary": "",
+    "description": "",
+    "tags": [],
+    "author": "Simone Nicastri",
+    "categories": [],
+    "pieces": [
+        "@activepieces/piece-schedule"
+    ],
+    "status": "PUBLISHED",
+    "blogUrl": "",
+    "metadata": {
+        "externalId": "R3ZPMlnx03OuwzUVcblvf"
+    },
+    "flows": [
+        {
+            "displayName": "Test Flow",
+            "trigger": {
+                "name": "trigger",
+                "valid": true,
+                "displayName": "Every Hour",
+                "type": "PIECE_TRIGGER",
+                "settings": {
+                    "propertySettings": {},
+                    "pieceName": "@activepieces/piece-schedule",
+                    "pieceVersion": "0.1.17",
+                    "input": {
+                        "run_on_weekends": false
+                    },
+                    "triggerName": "every_hour"
+                },
+                "nextAction": {
+                    "name": "step_1",
+                    "type": "CODE",
+                    "valid": true,
+                    "settings": {
+                        "input": {},
+                        "sourceCode": {
+                            "code": "export const code = async (inputs) => {\n  return { timestamp: new Date().toISOString(), message: \"Hello from Activepieces!\" };\n};",
+                            "packageJson": "{}"
+                        },
+                        "errorHandlingOptions": {
+                            "retryOnFailure": {
+                                "value": false
+                            },
+                            "continueOnFailure": {
+                                "value": false
+                            }
+                        }
+                    },
+                    "displayName": "Log Current Time"
+                }
+            },
+            "valid": true,
+            "schemaVersion": "16",
+            "notes": []
+        }
+    ]
+}

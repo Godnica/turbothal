@@ -1,0 +1,12 @@
+{
+  "_meta": {"description":"Trigger: Every week on specific day","piece":"@activepieces/piece-schedule","triggerName":"every_week","tested":true,"date":"2026-03-20","required_input":["day_of_the_week","hour_of_the_day","timezone"]},
+  "type": "UPDATE_TRIGGER",
+  "request": {
+    "name": "trigger", "displayName": "Every Monday at 9", "valid": true, "type": "PIECE_TRIGGER",
+    "settings": {
+      "pieceName": "@activepieces/piece-schedule", "pieceVersion": "~0.1.17",
+      "pieceType": "OFFICIAL", "packageType": "REGISTRY", "triggerName": "every_week",
+      "propertySettings": {}, "input": {"day_of_the_week": "MONDAY", "hour_of_the_day": 9, "timezone": "Europe/Rome"}, "inputUiInfo": {}
+    }
+  }
+}
