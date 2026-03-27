@@ -1,0 +1,31 @@
+/* Turbothal Branding Overrides */
+
+/* Auth pages background — matches the logo's dark teal background */
+.h-screen:has(> [data-testid="auth-form"], > .w-md) {
+  background: linear-gradient(135deg, #0e7490 0%, #cde2e5 50%, #22d3ee 100%);
+}
+
+/* Larger logo on auth pages — much more prominent */
+div.h-\[60px\] {
+  height: 180px !important;
+  margin-bottom: 24px;
+}
+
+div.h-\[60px\] img {
+  height: 100% !important;
+  max-height: 180px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* Auth card styling for contrast against colored background */
+.h-screen > .w-md,
+.h-screen .w-md {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 12px !important;
+}
+
+/* Make the card title and description white-friendly above the card */
+.h-screen.flex.flex-col.items-center.justify-center {
+  background: linear-gradient(135deg, #0e7490 0%, #cde2e5 50%, #22d3ee 100%);
+}

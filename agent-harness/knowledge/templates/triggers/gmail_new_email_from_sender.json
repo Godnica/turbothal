@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "description": "Trigger: Nuova email ricevuta da un mittente specifico",
+    "type": "PIECE_TRIGGER",
+    "piece": "@activepieces/piece-gmail",
+    "triggerName": "gmail_new_email_received",
+    "tested": true,
+    "date": "2026-03-27",
+    "notes": "Output annidato sotto trigger.message.* — usare trigger.message.text (non body_plain), trigger.message.subject, trigger.message.messageId, trigger.message.from.text"
+  },
+  "type": "UPDATE_TRIGGER",
+  "request": {
+    "name": "trigger",
+    "displayName": "Nuova email da mittente",
+    "valid": true,
+    "type": "PIECE_TRIGGER",
+    "settings": {
+      "pieceName": "@activepieces/piece-gmail",
+      "pieceVersion": "~0.11.6",
+      "pieceType": "OFFICIAL",
+      "packageType": "REGISTRY",
+      "triggerName": "gmail_new_email_received",
+      "propertySettings": {},
+      "input": {
+        "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
+        "subject": "",
+        "from": "mittente@example.com",
+        "to": "",
+        "label": "",
+        "category": ""
+      },
+      "inputUiInfo": {}
+    }
+  }
+}

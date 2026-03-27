@@ -1,0 +1,47 @@
+{
+  "name": "step_N",
+  "displayName": "Send Email",
+  "valid": true,
+  "type": "PIECE",
+  "settings": {
+    "pieceName": "@activepieces/piece-gmail",
+    "pieceVersion": "~0.11.6",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "actionName": "send_email",
+    "propertySettings": {
+      "receiver": {"type": "MANUAL"},
+      "cc": {"type": "MANUAL"},
+      "bcc": {"type": "MANUAL"},
+      "subject": {"type": "MANUAL"},
+      "body_type": {"type": "MANUAL"},
+      "body": {"type": "MANUAL"},
+      "reply_to": {"type": "MANUAL"},
+      "sender_name": {"type": "MANUAL"},
+      "from": {"type": "MANUAL"},
+      "attachments": {"type": "MANUAL"},
+      "in_reply_to": {"type": "MANUAL"},
+      "draft": {"type": "MANUAL"}
+    },
+    "input": {
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
+      "receiver": ["nicastrisimo@gmail.com"],
+      "cc": [],
+      "bcc": [],
+      "subject": "Test da Activepieces",
+      "body_type": "plain_text",
+      "body": "Ciao! Questa email è stata inviata automaticamente da Activepieces.",
+      "reply_to": [],
+      "sender_name": "",
+      "from": "",
+      "attachments": [],
+      "in_reply_to": "",
+      "draft": false
+    },
+    "inputUiInfo": {},
+    "errorHandlingOptions": {
+      "continueOnFailure": {"value": false},
+      "retryOnFailure": {"value": false}
+    }
+  }
+}

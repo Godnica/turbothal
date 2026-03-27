@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "update-multiple-rows",
+    "displayName": "Update Multiple Rows",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "values": {},
+      "sheetId": "0",
+      "as_string": false,
+      "headerRow": 1,
+      "spreadsheetId": "test_spreadsheet_id",
+      "includeTeamDrives": false
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "update-multiple-rows",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "values": {
+        "type": "MANUAL"
+      },
+      "sheetId": {
+        "type": "MANUAL"
+      },
+      "as_string": {
+        "type": "MANUAL"
+      },
+      "headerRow": {
+        "type": "MANUAL"
+      },
+      "spreadsheetId": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

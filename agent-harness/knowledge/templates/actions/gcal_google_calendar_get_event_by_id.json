@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-calendar",
+    "action": "google_calendar_get_event_by_id",
+    "displayName": "Get Event by ID",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "event_id": "test_event_id",
+      "time_zone": "test_value",
+      "calendar_id": "primary",
+      "max_attendees": 1
+    },
+    "pieceName": "@activepieces/piece-google-calendar",
+    "actionName": "google_calendar_get_event_by_id",
+    "pieceVersion": "~0.9.0",
+    "propertySettings": {
+      "event_id": {
+        "type": "MANUAL"
+      },
+      "time_zone": {
+        "type": "MANUAL"
+      },
+      "calendar_id": {
+        "type": "MANUAL"
+      },
+      "max_attendees": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

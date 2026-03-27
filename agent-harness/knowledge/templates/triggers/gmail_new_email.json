@@ -1,0 +1,29 @@
+{
+  "name": "trigger",
+  "displayName": "New Email Received",
+  "valid": true,
+  "type": "PIECE_TRIGGER",
+  "settings": {
+    "pieceName": "@activepieces/piece-gmail",
+    "pieceVersion": "~0.11.6",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "triggerName": "gmail_new_email_received",
+    "propertySettings": {
+      "subject": {"type": "MANUAL"},
+      "from": {"type": "MANUAL"},
+      "to": {"type": "MANUAL"},
+      "label": {"type": "MANUAL"},
+      "category": {"type": "MANUAL"}
+    },
+    "input": {
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
+      "subject": "",
+      "from": "",
+      "to": "",
+      "label": "",
+      "category": ""
+    },
+    "inputUiInfo": {}
+  }
+}

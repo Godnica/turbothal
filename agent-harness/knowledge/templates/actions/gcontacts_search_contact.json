@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-contacts",
+    "action": "search_contact",
+    "displayName": "Search Contacts",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "query": "test query",
+      "pageSize": 1,
+      "readMask": [
+        "names",
+        "emailAddresses"
+      ]
+    },
+    "pieceName": "@activepieces/piece-google-contacts",
+    "actionName": "search_contact",
+    "pieceVersion": "~0.4.0",
+    "propertySettings": {
+      "query": {
+        "type": "MANUAL"
+      },
+      "pageSize": {
+        "type": "MANUAL"
+      },
+      "readMask": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

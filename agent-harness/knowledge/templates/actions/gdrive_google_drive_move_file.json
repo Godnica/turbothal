@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "google-drive-move-file",
+    "displayName": "Move File",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "fileId": "test_file_id",
+      "folderId": "",
+      "include_team_drives": false
+    },
+    "pieceName": "@activepieces/piece-google-drive",
+    "actionName": "google-drive-move-file",
+    "pieceVersion": "~0.7.0",
+    "propertySettings": {
+      "fileId": {
+        "type": "MANUAL"
+      },
+      "folderId": {
+        "type": "MANUAL"
+      },
+      "include_team_drives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

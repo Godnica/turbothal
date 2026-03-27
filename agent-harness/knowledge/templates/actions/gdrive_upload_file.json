@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "upload_gdrive_file",
+    "displayName": "Upload file",
+    "tested": true,
+    "note": "file field needs a file reference (URL or base64 data URI)",
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "pieceName": "@activepieces/piece-google-drive",
+    "pieceVersion": "~0.7.0",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "actionName": "upload_gdrive_file",
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "fileName": "uploaded_file.txt",
+      "file": "https://example.com/file.txt",
+      "parentFolder": "",
+      "include_team_drives": false
+    },
+    "inputUiInfo": {},
+    "propertySettings": {
+      "fileName": {
+        "type": "MANUAL"
+      },
+      "file": {
+        "type": "MANUAL"
+      },
+      "parentFolder": {
+        "type": "MANUAL"
+      },
+      "include_team_drives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "continueOnFailure": {
+        "value": false
+      },
+      "retryOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "clear_sheet",
+    "displayName": "Clear Sheet",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "sheetId": "0",
+      "headerRow": 1,
+      "spreadsheetId": "test_spreadsheet_id",
+      "includeTeamDrives": false,
+      "is_first_row_headers": true
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "clear_sheet",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "sheetId": {
+        "type": "MANUAL"
+      },
+      "headerRow": {
+        "type": "MANUAL"
+      },
+      "spreadsheetId": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      },
+      "is_first_row_headers": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

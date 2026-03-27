@@ -1,0 +1,21 @@
+{
+  "name": "trigger",
+  "displayName": "New Labeled Email",
+  "valid": true,
+  "type": "PIECE_TRIGGER",
+  "settings": {
+    "pieceName": "@activepieces/piece-gmail",
+    "pieceVersion": "~0.11.6",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "triggerName": "new_labeled_email",
+    "propertySettings": {
+      "label": {"type": "MANUAL"}
+    },
+    "input": {
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
+      "label": ""
+    },
+    "inputUiInfo": {}
+  }
+}

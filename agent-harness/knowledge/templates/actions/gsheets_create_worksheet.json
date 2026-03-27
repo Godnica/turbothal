@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "create-worksheet",
+    "displayName": "Create Worksheet",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "title": "Test Title",
+      "headers": [],
+      "spreadsheetId": "test_spreadsheet_id",
+      "includeTeamDrives": false
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "create-worksheet",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "title": {
+        "type": "MANUAL"
+      },
+      "headers": {
+        "type": "MANUAL"
+      },
+      "spreadsheetId": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

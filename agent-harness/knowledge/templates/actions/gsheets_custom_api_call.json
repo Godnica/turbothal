@@ -1,0 +1,73 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "custom_api_call",
+    "displayName": "Custom API Call",
+    "tested": true,
+    "note": "url must be dict {'url': '...'} not plain string",
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "pieceName": "@activepieces/piece-google-sheets",
+    "pieceVersion": "~0.14.0",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "actionName": "custom_api_call",
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "url": {
+        "url": "https://sheets.googleapis.com/v4/spreadsheets"
+      },
+      "method": "GET",
+      "headers": {},
+      "queryParams": {},
+      "body_type": "none",
+      "body": {},
+      "response_is_binary": false,
+      "failsafe": false,
+      "timeout": 30,
+      "followRedirects": true
+    },
+    "inputUiInfo": {},
+    "propertySettings": {
+      "url": {
+        "type": "MANUAL"
+      },
+      "method": {
+        "type": "MANUAL"
+      },
+      "headers": {
+        "type": "MANUAL"
+      },
+      "queryParams": {
+        "type": "MANUAL"
+      },
+      "body_type": {
+        "type": "MANUAL"
+      },
+      "body": {
+        "type": "MANUAL"
+      },
+      "response_is_binary": {
+        "type": "MANUAL"
+      },
+      "failsafe": {
+        "type": "MANUAL"
+      },
+      "timeout": {
+        "type": "MANUAL"
+      },
+      "followRedirects": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "continueOnFailure": {
+        "value": false
+      },
+      "retryOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

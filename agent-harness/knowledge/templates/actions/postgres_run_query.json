@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "description": "Action: PostgreSQL Run Query - Execute SQL queries on a PostgreSQL database",
+    "piece": "@activepieces/piece-postgres",
+    "actionName": "run-query",
+    "tested": true,
+    "date": "2026-03-20",
+    "required_input": ["auth", "query"],
+    "optional_input": ["args", "query_timeout", "connection_timeout_ms", "application_name"],
+    "connection_type": "CUSTOM_AUTH",
+    "connection_fields": ["host", "port", "user", "password", "database", "enable_ssl", "reject_unauthorized", "certificate"]
+  },
+  "type": "ADD_ACTION",
+  "request": {
+    "parentStep": "trigger",
+    "stepLocationRelativeToParent": "AFTER",
+    "action": {
+      "name": "step_1",
+      "displayName": "Run Query",
+      "valid": true,
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@activepieces/piece-postgres",
+        "pieceVersion": "~0.2.3",
+        "pieceType": "OFFICIAL",
+        "packageType": "REGISTRY",
+        "actionName": "run-query",
+        "propertySettings": {},
+        "input": {
+          "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
+          "query": "SELECT 1 AS test",
+          "args": [],
+          "query_timeout": 30000,
+          "connection_timeout_ms": 30000,
+          "application_name": ""
+        },
+        "inputUiInfo": {},
+        "errorHandlingOptions": {
+          "continueOnFailure": {"value": false},
+          "retryOnFailure": {"value": false}
+        }
+      }
+    }
+  }
+}

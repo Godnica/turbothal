@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "format-row",
+    "displayName": "Format Row(s)",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "bold": false,
+      "italic": false,
+      "bgColor": "test_value",
+      "sheetId": "0",
+      "endingRow": 1,
+      "textColor": "test_value",
+      "startingRow": 1,
+      "spreadsheetId": "test_spreadsheet_id",
+      "strikethrough": false,
+      "includeTeamDrives": false
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "format-row",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "bold": {
+        "type": "MANUAL"
+      },
+      "italic": {
+        "type": "MANUAL"
+      },
+      "bgColor": {
+        "type": "MANUAL"
+      },
+      "sheetId": {
+        "type": "MANUAL"
+      },
+      "endingRow": {
+        "type": "MANUAL"
+      },
+      "textColor": {
+        "type": "MANUAL"
+      },
+      "startingRow": {
+        "type": "MANUAL"
+      },
+      "spreadsheetId": {
+        "type": "MANUAL"
+      },
+      "strikethrough": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

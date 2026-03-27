@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "copy-worksheet",
+    "displayName": "Copy Worksheet",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "sheetId": "0",
+      "spreadsheetId": "test_spreadsheet_id",
+      "includeTeamDrives": false,
+      "desinationSpeadsheetId": "test_spreadsheet_id"
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "copy-worksheet",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "sheetId": {
+        "type": "MANUAL"
+      },
+      "spreadsheetId": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      },
+      "desinationSpeadsheetId": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

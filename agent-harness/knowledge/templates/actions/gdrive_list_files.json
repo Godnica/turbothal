@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "list-files",
+    "displayName": "List files",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "folderId": "test_folder_id",
+      "depthLevel": 1,
+      "downloadFiles": false,
+      "includeTrashed": false,
+      "include_team_drives": false
+    },
+    "pieceName": "@activepieces/piece-google-drive",
+    "actionName": "list-files",
+    "pieceVersion": "~0.7.0",
+    "propertySettings": {
+      "folderId": {
+        "type": "MANUAL"
+      },
+      "depthLevel": {
+        "type": "MANUAL"
+      },
+      "downloadFiles": {
+        "type": "MANUAL"
+      },
+      "includeTrashed": {
+        "type": "MANUAL"
+      },
+      "include_team_drives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

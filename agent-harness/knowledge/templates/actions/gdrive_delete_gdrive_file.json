@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "delete_gdrive_file",
+    "displayName": "Delete file",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "fileId": "test_file_id",
+      "include_team_drives": false
+    },
+    "pieceName": "@activepieces/piece-google-drive",
+    "actionName": "delete_gdrive_file",
+    "pieceVersion": "~0.7.0",
+    "propertySettings": {
+      "fileId": {
+        "type": "MANUAL"
+      },
+      "include_team_drives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-calendar",
+    "action": "google_calendar_find_busy_free_periods",
+    "displayName": "Find Busy/Free Periods in Calendar",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "end_date": "2026-01-01T01:00:00.000Z",
+      "start_date": "2026-01-01T00:00:00.000Z",
+      "calendar_ids": [
+        "primary"
+      ]
+    },
+    "pieceName": "@activepieces/piece-google-calendar",
+    "actionName": "google_calendar_find_busy_free_periods",
+    "pieceVersion": "~0.9.0",
+    "propertySettings": {
+      "end_date": {
+        "type": "MANUAL"
+      },
+      "start_date": {
+        "type": "MANUAL"
+      },
+      "calendar_ids": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

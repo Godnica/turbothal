@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-calendar",
+    "action": "google_calendar_get_events",
+    "displayName": "Get all Events",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "search": "test_value",
+      "end_date": "2026-01-01T01:00:00.000Z",
+      "start_date": "2026-01-01T00:00:00.000Z",
+      "calendar_id": "primary",
+      "event_types": [
+        "default"
+      ],
+      "singleEvents": true
+    },
+    "pieceName": "@activepieces/piece-google-calendar",
+    "actionName": "google_calendar_get_events",
+    "pieceVersion": "~0.9.0",
+    "propertySettings": {
+      "search": {
+        "type": "MANUAL"
+      },
+      "end_date": {
+        "type": "MANUAL"
+      },
+      "start_date": {
+        "type": "MANUAL"
+      },
+      "calendar_id": {
+        "type": "MANUAL"
+      },
+      "event_types": {
+        "type": "MANUAL"
+      },
+      "singleEvents": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

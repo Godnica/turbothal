@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "get-file-or-folder-by-id",
+    "displayName": "Get File Information",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "id": "test_id",
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "include_team_drives": false
+    },
+    "pieceName": "@activepieces/piece-google-drive",
+    "actionName": "get-file-or-folder-by-id",
+    "pieceVersion": "~0.7.0",
+    "propertySettings": {
+      "id": {
+        "type": "MANUAL"
+      },
+      "include_team_drives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

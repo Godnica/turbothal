@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "duplicate_file",
+    "displayName": "Duplicate File",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "name": "Test Name",
+      "fileId": "test_file_id",
+      "folderId": "test_folder_id",
+      "mimeType": "",
+      "include_team_drives": false
+    },
+    "pieceName": "@activepieces/piece-google-drive",
+    "actionName": "duplicate_file",
+    "pieceVersion": "~0.7.0",
+    "propertySettings": {
+      "name": {
+        "type": "MANUAL"
+      },
+      "fileId": {
+        "type": "MANUAL"
+      },
+      "folderId": {
+        "type": "MANUAL"
+      },
+      "mimeType": {
+        "type": "MANUAL"
+      },
+      "include_team_drives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

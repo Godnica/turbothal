@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "set_public_access",
+    "displayName": "Set public access",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "role": "reader",
+      "fileId": "test_file_id"
+    },
+    "pieceName": "@activepieces/piece-google-drive",
+    "actionName": "set_public_access",
+    "pieceVersion": "~0.7.0",
+    "propertySettings": {
+      "role": {
+        "type": "MANUAL"
+      },
+      "fileId": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "delete_row",
+    "displayName": "Delete Row",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "rowId": 1,
+      "sheetId": "0",
+      "spreadsheetId": "test_spreadsheet_id",
+      "includeTeamDrives": false
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "delete_row",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "rowId": {
+        "type": "MANUAL"
+      },
+      "sheetId": {
+        "type": "MANUAL"
+      },
+      "spreadsheetId": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

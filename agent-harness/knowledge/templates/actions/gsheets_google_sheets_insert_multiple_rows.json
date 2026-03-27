@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "google-sheets-insert-multiple-rows",
+    "displayName": "Add Multiple Rows",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "values": {},
+      "sheetId": "0",
+      "as_string": false,
+      "headerRow": 1,
+      "overwrite": false,
+      "input_type": "manual",
+      "spreadsheetId": "test_spreadsheet_id",
+      "includeTeamDrives": false,
+      "check_for_duplicate": false,
+      "check_for_duplicate_column": {}
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "google-sheets-insert-multiple-rows",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "values": {
+        "type": "MANUAL"
+      },
+      "sheetId": {
+        "type": "MANUAL"
+      },
+      "as_string": {
+        "type": "MANUAL"
+      },
+      "headerRow": {
+        "type": "MANUAL"
+      },
+      "overwrite": {
+        "type": "MANUAL"
+      },
+      "input_type": {
+        "type": "MANUAL"
+      },
+      "spreadsheetId": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      },
+      "check_for_duplicate": {
+        "type": "MANUAL"
+      },
+      "check_for_duplicate_column": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

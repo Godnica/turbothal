@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-contacts",
+    "action": "add_contact",
+    "displayName": "Add Contact",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "email": "test_value",
+      "company": "test_value",
+      "jobTitle": "test_value",
+      "lastName": "Doe",
+      "firstName": "John",
+      "middleName": "test_value",
+      "phoneNumber": "test_value"
+    },
+    "pieceName": "@activepieces/piece-google-contacts",
+    "actionName": "add_contact",
+    "pieceVersion": "~0.4.0",
+    "propertySettings": {
+      "email": {
+        "type": "MANUAL"
+      },
+      "company": {
+        "type": "MANUAL"
+      },
+      "jobTitle": {
+        "type": "MANUAL"
+      },
+      "lastName": {
+        "type": "MANUAL"
+      },
+      "firstName": {
+        "type": "MANUAL"
+      },
+      "middleName": {
+        "type": "MANUAL"
+      },
+      "phoneNumber": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

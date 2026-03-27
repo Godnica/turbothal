@@ -284,17 +284,47 @@ Le azioni dentro un branch si aggiungono con `stepLocationRelativeToParent: "INS
 
 ## 6. Riferimenti tra Step (Interpolazione)
 
-I valori degli step precedenti si referenziano con la sintassi `{{step_name.output.field}}`:
+I valori degli step precedenti si referenziano con la sintassi `{{step_name.property}}`.
 
-| Pattern | Significato |
-|---------|-------------|
-| `{{trigger.output.body}}` | Output del trigger |
-| `{{step_1.output.result}}` | Output dello step_1 |
-| `{{connections['my-connection']}}` | Riferimento a una connessione salvata |
+> **⚠️ CRITICO**: `.output` è IMPLICITO nella sintassi di interpolazione!
+> - ✅ `{{step_1.result}}` → accede a `step_1.output.result`
+> - ❌ `{{step_1.output.result}}` → NON funziona (risolve a stringa vuota)
+
+### Regole di interpolazione
+
+| Output dello step | Sintassi corretta | Risultato |
+|-------------------|-------------------|-----------|
+| Primitivo (es. math-helper → `68`) | `{{step_1}}` | `68` |
+| Oggetto con `.result` (es. date-helper → `{result: "20/03/2026"}`) | `{{step_1.result}}` | `20/03/2026` |
+| Oggetto (es. trigger webhook → `{method, headers, body}`) | `{{trigger.body.question}}` | valore del campo |
+| Connessione salvata | `{{connections['my-connection']}}` | token/credenziali |
+
+### Esempi testati e funzionanti
+
+```
+# Date helper (ritorna {result: "20/03/2026 14:21"})
+{{step_1.result}}  →  "20/03/2026 14:21"
+
+# Math helper (ritorna 68 come primitivo)
+{{step_2}}  →  68
+
+# Concatenazione in text-helper concat
+texts: ["Digest del ", "{{step_1.result}}", " — Numero: ", "{{step_2}}"]
+→ "Digest del 20/03/2026 14:21 — Numero: 68"
+```
+
+### Errori comuni
+
+| Errore | Causa | Soluzione |
+|--------|-------|-----------|
+| `[object Object]` nel testo | Usato `{{step_X}}` su oggetto | Accedere alla proprietà: `{{step_X.result}}` |
+| Stringa vuota | Usato `{{step_X.output.result}}` | Rimuovere `.output`: `{{step_X.result}}` |
+| `undefined` in CODE input | Interpolazione di oggetti nested in input CODE | Rendere il codice autosufficiente, senza dipendere da interpolazione complessa |
+| Stringa vuota per `{{trigger.id}}` con Gmail trigger | Il trigger Gmail NON ha `.id` al livello radice | Usare `{{trigger.message.messageId}}` (vedi §11) |
 
 > **Nota**: L'interpolazione funziona meglio con valori primitivi (stringhe, numeri).
-> Per passare oggetti complessi a un CODE step, è meglio accedervi direttamente nel codice
-> anziché passarli come input. Il codice riceve tutti gli input tramite il parametro `inputs`.
+> Per passare oggetti complessi a un CODE step, è meglio rendere il codice autosufficiente
+> anziché passare valori interpolati come input.
 
 ---
 
@@ -383,3 +413,90 @@ Per la maggior parte dei casi, `{}` vuoto funziona.
 |-------|-------------|
 | `continueOnFailure` | Se `true`, il flow continua anche se lo step fallisce |
 | `retryOnFailure` | Se `true`, lo step viene ritentato automaticamente |
+
+---
+
+## 11. Output del Trigger Gmail (`gmail_new_email_received`)
+
+> **⚠️ CRITICO**: L'output del trigger Gmail è annidato sotto `trigger.message.*`, NON al livello radice.
+
+Il trigger usa `mailparser` internamente e restituisce:
+
+```json
+{
+  "message": {
+    "subject": "Come stai oggi?",
+    "text": "Ciao, sto bene grazie!",
+    "html": "<p>Ciao, sto bene grazie!</p>",
+    "messageId": "<abc123@mail.gmail.com>",
+    "from": {
+      "text": "Silvio Revelli <silviorevelli@gmail.com>",
+      "value": [{ "address": "silviorevelli@gmail.com", "name": "Silvio Revelli" }]
+    },
+    "to": { ... },
+    "date": "2026-03-27T10:00:00.000Z",
+    "attachments": []
+  },
+  "thread": { ... }
+}
+```
+
+### Campi di interpolazione testati
+
+| Campo | Sintassi corretta | Note |
+|-------|-------------------|------|
+| Corpo testo | `{{trigger.message.text}}` | Testo plain dell'email |
+| Oggetto | `{{trigger.message.subject}}` | Oggetto dell'email |
+| Message-ID RFC 2822 | `{{trigger.message.messageId}}` | Per `in_reply_to` in send_email |
+| Mittente (full) | `{{trigger.message.from.text}}` | Es. "Nome <email@gmail.com>" |
+
+### Come fare reply a un'email Gmail
+
+**NON usare `reply_to_email`** se il trigger è `gmail_new_email_received` — richiede il Gmail API message ID (esadecimale) che non è accessibile direttamente dall'output del trigger.
+
+**✅ Usare `send_email` con `in_reply_to`:**
+
+```json
+{
+  "actionName": "send_email",
+  "input": {
+    "receiver": ["mittente@gmail.com"],
+    "subject": "Re: {{trigger.message.subject}}",
+    "body_type": "plain_text",
+    "body": "La mia risposta",
+    "in_reply_to": "{{trigger.message.messageId}}"
+  }
+}
+```
+
+Il campo `in_reply_to` imposta gli header `In-Reply-To` e `References` e recupera il thread ID corretto via `Rfc822msgid:` search.
+
+---
+
+## 12. Pattern Auth per API calls (test_helper.sh)
+
+Il JWT salvato in `~/.config/activepieces/config.toml` **non funziona con curl diretto** (401 Unauthorized). Usare sempre `get_token()` da `test_helper.sh` che esegue un fresh sign-in:
+
+```bash
+source agent-harness/knowledge/test_helper.sh
+TOKEN=$(get_token)
+curl -s "$API/flows" -H "Authorization: Bearer $TOKEN"
+```
+
+Credenziali: `simonemiticonicastri@gmail.com` / `Pass123!`
+Project ID: `ctxq6E1nbcME4wTgkD5Qe`
+
+---
+
+## 13. Versioni piece verificate (2026-03-27)
+
+| Piece | Versione installata | pieceVersion da usare |
+|-------|--------------------|-----------------------|
+| `@activepieces/piece-webhook` | 0.1.32 | `~0.1.31` |
+| `@activepieces/piece-gmail` | 0.11.6 | `~0.11.6` |
+| `@activepieces/piece-schedule` | 0.1.17 | `~0.1.17` |
+
+Per scoprire la versione installata:
+```bash
+curl -s "$API/pieces?searchQuery=<nome>" -H "Authorization: Bearer $TOKEN"
+```

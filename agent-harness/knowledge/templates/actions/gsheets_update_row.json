@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "update_row",
+    "displayName": "Update Row",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "row_id": 1,
+      "values": {},
+      "sheetId": "0",
+      "spreadsheetId": "test_spreadsheet_id",
+      "first_row_headers": true,
+      "includeTeamDrives": false
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "update_row",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "row_id": {
+        "type": "MANUAL"
+      },
+      "values": {
+        "type": "MANUAL"
+      },
+      "sheetId": {
+        "type": "MANUAL"
+      },
+      "spreadsheetId": {
+        "type": "MANUAL"
+      },
+      "first_row_headers": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

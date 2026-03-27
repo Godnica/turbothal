@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "create_new_gdrive_file",
+    "displayName": "Create new file",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "text": "Test text content",
+      "fileName": "test_file.txt",
+      "fileType": "text/plain",
+      "parentFolder": "",
+      "include_team_drives": false
+    },
+    "pieceName": "@activepieces/piece-google-drive",
+    "actionName": "create_new_gdrive_file",
+    "pieceVersion": "~0.7.0",
+    "propertySettings": {
+      "text": {
+        "type": "MANUAL"
+      },
+      "fileName": {
+        "type": "MANUAL"
+      },
+      "fileType": {
+        "type": "MANUAL"
+      },
+      "parentFolder": {
+        "type": "MANUAL"
+      },
+      "include_team_drives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

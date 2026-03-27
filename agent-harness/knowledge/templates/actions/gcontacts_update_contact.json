@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-contacts",
+    "action": "update_contact",
+    "displayName": "Update Contact",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "etag": "test_etag",
+      "email": "test_value",
+      "company": "test_value",
+      "jobTitle": "test_value",
+      "lastName": "Doe",
+      "firstName": "John",
+      "middleName": "test_value",
+      "phoneNumber": "test_value",
+      "resourceName": "people/123",
+      "updatePersonFields": [
+        "names"
+      ]
+    },
+    "pieceName": "@activepieces/piece-google-contacts",
+    "actionName": "update_contact",
+    "pieceVersion": "~0.4.0",
+    "propertySettings": {
+      "etag": {
+        "type": "MANUAL"
+      },
+      "email": {
+        "type": "MANUAL"
+      },
+      "company": {
+        "type": "MANUAL"
+      },
+      "jobTitle": {
+        "type": "MANUAL"
+      },
+      "lastName": {
+        "type": "MANUAL"
+      },
+      "firstName": {
+        "type": "MANUAL"
+      },
+      "middleName": {
+        "type": "MANUAL"
+      },
+      "phoneNumber": {
+        "type": "MANUAL"
+      },
+      "resourceName": {
+        "type": "MANUAL"
+      },
+      "updatePersonFields": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "save_file_as_pdf",
+    "displayName": "Save Document as PDF",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "name": "Test Name",
+      "folderId": "test_folder_id",
+      "documentId": "test_doc_id",
+      "include_team_drives": false
+    },
+    "pieceName": "@activepieces/piece-google-drive",
+    "actionName": "save_file_as_pdf",
+    "pieceVersion": "~0.7.0",
+    "propertySettings": {
+      "name": {
+        "type": "MANUAL"
+      },
+      "folderId": {
+        "type": "MANUAL"
+      },
+      "documentId": {
+        "type": "MANUAL"
+      },
+      "include_team_drives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

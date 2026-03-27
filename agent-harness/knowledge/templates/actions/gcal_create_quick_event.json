@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-calendar",
+    "action": "create_quick_event",
+    "displayName": "Create Quick Event",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "text": "Test text content",
+      "calendar_id": "primary",
+      "send_updates": "none"
+    },
+    "pieceName": "@activepieces/piece-google-calendar",
+    "actionName": "create_quick_event",
+    "pieceVersion": "~0.9.0",
+    "propertySettings": {
+      "text": {
+        "type": "MANUAL"
+      },
+      "calendar_id": {
+        "type": "MANUAL"
+      },
+      "send_updates": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "find_row_by_num",
+    "displayName": "Get Single Row by ID",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "sheetId": "0",
+      "headerRow": 1,
+      "rowNumber": 1,
+      "spreadsheetId": "test_spreadsheet_id",
+      "includeTeamDrives": false
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "find_row_by_num",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "sheetId": {
+        "type": "MANUAL"
+      },
+      "headerRow": {
+        "type": "MANUAL"
+      },
+      "rowNumber": {
+        "type": "MANUAL"
+      },
+      "spreadsheetId": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

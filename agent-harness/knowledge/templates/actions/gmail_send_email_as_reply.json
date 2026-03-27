@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "description": "Azione: Invia email come risposta (reply in thread) a un'email ricevuta via trigger Gmail",
+    "type": "PIECE",
+    "piece": "@activepieces/piece-gmail",
+    "actionName": "send_email",
+    "tested": true,
+    "date": "2026-03-27",
+    "notes": "NON usare reply_to_email quando il trigger è gmail_new_email_received — richiede Gmail API message ID non disponibile nell'output del trigger. Usare send_email con in_reply_to: {{trigger.message.messageId}} per il threading corretto."
+  },
+  "type": "ADD_ACTION",
+  "request": {
+    "parentStep": "PARENT_STEP_NAME",
+    "stepLocationRelativeToParent": "AFTER",
+    "action": {
+      "name": "step_N",
+      "displayName": "Rispondi all'email",
+      "valid": true,
+      "type": "PIECE",
+      "settings": {
+        "pieceName": "@activepieces/piece-gmail",
+        "pieceVersion": "~0.11.6",
+        "pieceType": "OFFICIAL",
+        "packageType": "REGISTRY",
+        "actionName": "send_email",
+        "propertySettings": {},
+        "input": {
+          "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
+          "receiver": ["{{trigger.message.from.value.0.address}}"],
+          "cc": [],
+          "bcc": [],
+          "subject": "Re: {{trigger.message.subject}}",
+          "body_type": "plain_text",
+          "body": "Il tuo testo di risposta qui",
+          "reply_to": [],
+          "sender_name": "",
+          "from": "",
+          "attachments": [],
+          "in_reply_to": "{{trigger.message.messageId}}",
+          "draft": false
+        },
+        "errorHandlingOptions": {
+          "continueOnFailure": {"value": false},
+          "retryOnFailure": {"value": false}
+        }
+      }
+    }
+  }
+}

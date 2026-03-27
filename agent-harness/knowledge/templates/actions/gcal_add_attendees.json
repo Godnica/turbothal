@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-calendar",
+    "action": "google-calendar-add-attendees",
+    "displayName": "Add Attendees to Event",
+    "tested": true,
+    "note": "attendees must be array of email strings, not objects",
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "pieceName": "@activepieces/piece-google-calendar",
+    "pieceVersion": "~0.9.0",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "actionName": "google-calendar-add-attendees",
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "calendar_id": "primary",
+      "eventId": "EVENT_ID_HERE",
+      "attendees": [
+        "email@example.com"
+      ]
+    },
+    "inputUiInfo": {},
+    "propertySettings": {
+      "calendar_id": {
+        "type": "MANUAL"
+      },
+      "eventId": {
+        "type": "MANUAL"
+      },
+      "attendees": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "continueOnFailure": {
+        "value": false
+      },
+      "retryOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "update_permissions",
+    "displayName": "Update permissions",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "fileId": "test_file_id",
+      "user_email": "test@example.com",
+      "permission_name": "reader",
+      "include_team_drives": false,
+      "send_invitation_email": true
+    },
+    "pieceName": "@activepieces/piece-google-drive",
+    "actionName": "update_permissions",
+    "pieceVersion": "~0.7.0",
+    "propertySettings": {
+      "fileId": {
+        "type": "MANUAL"
+      },
+      "user_email": {
+        "type": "MANUAL"
+      },
+      "permission_name": {
+        "type": "MANUAL"
+      },
+      "include_team_drives": {
+        "type": "MANUAL"
+      },
+      "send_invitation_email": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

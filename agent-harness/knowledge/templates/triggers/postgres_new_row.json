@@ -1,0 +1,21 @@
+{
+  "name": "trigger",
+  "displayName": "New Row",
+  "valid": true,
+  "type": "PIECE_TRIGGER",
+  "settings": {
+    "pieceName": "@activepieces/piece-postgres",
+    "pieceVersion": "~0.2.3",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "triggerName": "new-row",
+    "propertySettings": {},
+    "input": {
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
+      "table": {"table_schema": "public", "table_name": "TABLE_NAME"},
+      "order_by": "COLUMN_NAME",
+      "order_direction": "DESC"
+    },
+    "inputUiInfo": {}
+  }
+}

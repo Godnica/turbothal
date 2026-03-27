@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "find_rows",
+    "displayName": "Find Rows",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "sheetId": "0",
+      "headerRow": 1,
+      "matchCase": false,
+      "columnName": "A",
+      "searchValue": "test",
+      "startingRow": 1,
+      "numberOfRows": 1,
+      "spreadsheetId": "test_spreadsheet_id",
+      "useHeaderNames": false,
+      "includeTeamDrives": false
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "find_rows",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "sheetId": {
+        "type": "MANUAL"
+      },
+      "headerRow": {
+        "type": "MANUAL"
+      },
+      "matchCase": {
+        "type": "MANUAL"
+      },
+      "columnName": {
+        "type": "MANUAL"
+      },
+      "searchValue": {
+        "type": "MANUAL"
+      },
+      "startingRow": {
+        "type": "MANUAL"
+      },
+      "numberOfRows": {
+        "type": "MANUAL"
+      },
+      "spreadsheetId": {
+        "type": "MANUAL"
+      },
+      "useHeaderNames": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

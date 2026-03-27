@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-drive",
+    "action": "create_new_gdrive_folder",
+    "displayName": "Create new folder",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "folderName": "Test Folder",
+      "parentFolder": "",
+      "include_team_drives": false
+    },
+    "pieceName": "@activepieces/piece-google-drive",
+    "actionName": "create_new_gdrive_folder",
+    "pieceVersion": "~0.7.0",
+    "propertySettings": {
+      "folderName": {
+        "type": "MANUAL"
+      },
+      "parentFolder": {
+        "type": "MANUAL"
+      },
+      "include_team_drives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

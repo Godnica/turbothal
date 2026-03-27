@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-calendar",
+    "action": "delete_event",
+    "displayName": "Delete Event",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "eventId": "test_event_id",
+      "calendar_id": "primary"
+    },
+    "pieceName": "@activepieces/piece-google-calendar",
+    "actionName": "delete_event",
+    "pieceVersion": "~0.9.0",
+    "propertySettings": {
+      "eventId": {
+        "type": "MANUAL"
+      },
+      "calendar_id": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

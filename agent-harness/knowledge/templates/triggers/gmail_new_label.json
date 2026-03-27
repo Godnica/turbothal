@@ -1,0 +1,18 @@
+{
+  "name": "trigger",
+  "displayName": "New Label",
+  "valid": true,
+  "type": "PIECE_TRIGGER",
+  "settings": {
+    "pieceName": "@activepieces/piece-gmail",
+    "pieceVersion": "~0.11.6",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "triggerName": "new_label",
+    "propertySettings": {},
+    "input": {
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}"
+    },
+    "inputUiInfo": {}
+  }
+}

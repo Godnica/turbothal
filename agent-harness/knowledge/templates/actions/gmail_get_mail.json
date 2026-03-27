@@ -1,0 +1,25 @@
+{
+  "name": "step_N",
+  "displayName": "Get Email",
+  "valid": true,
+  "type": "PIECE",
+  "settings": {
+    "pieceName": "@activepieces/piece-gmail",
+    "pieceVersion": "~0.11.6",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "actionName": "gmail_get_mail",
+    "propertySettings": {
+      "message_id": {"type": "MANUAL"}
+    },
+    "input": {
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
+      "message_id": "MESSAGE_ID_HERE"
+    },
+    "inputUiInfo": {},
+    "errorHandlingOptions": {
+      "continueOnFailure": {"value": false},
+      "retryOnFailure": {"value": false}
+    }
+  }
+}

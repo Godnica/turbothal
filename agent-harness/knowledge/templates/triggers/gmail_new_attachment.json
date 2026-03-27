@@ -1,0 +1,31 @@
+{
+  "name": "trigger",
+  "displayName": "New Attachment",
+  "valid": true,
+  "type": "PIECE_TRIGGER",
+  "settings": {
+    "pieceName": "@activepieces/piece-gmail",
+    "pieceVersion": "~0.11.6",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "triggerName": "new_attachment",
+    "propertySettings": {
+      "from": {"type": "MANUAL"},
+      "to": {"type": "MANUAL"},
+      "subject": {"type": "MANUAL"},
+      "label": {"type": "MANUAL"},
+      "category": {"type": "MANUAL"},
+      "filenameExtension": {"type": "MANUAL"}
+    },
+    "input": {
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
+      "from": "",
+      "to": "",
+      "subject": "",
+      "label": "",
+      "category": "",
+      "filenameExtension": ""
+    },
+    "inputUiInfo": {}
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "step_N",
+  "displayName": "Reply to Email",
+  "valid": true,
+  "type": "PIECE",
+  "settings": {
+    "pieceName": "@activepieces/piece-gmail",
+    "pieceVersion": "~0.11.6",
+    "pieceType": "OFFICIAL",
+    "packageType": "REGISTRY",
+    "actionName": "reply_to_email",
+    "propertySettings": {
+      "message_id": {"type": "MANUAL"},
+      "reply_type": {"type": "MANUAL"},
+      "body_type": {"type": "MANUAL"},
+      "body": {"type": "MANUAL"},
+      "sender_name": {"type": "MANUAL"},
+      "attachment": {"type": "MANUAL"},
+      "attachment_name": {"type": "MANUAL"}
+    },
+    "input": {
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
+      "message_id": "MESSAGE_ID_HERE",
+      "reply_type": "reply",
+      "body_type": "plain_text",
+      "body": "Reply body here",
+      "sender_name": "",
+      "attachment": "",
+      "attachment_name": ""
+    },
+    "inputUiInfo": {},
+    "errorHandlingOptions": {
+      "continueOnFailure": {"value": false},
+      "retryOnFailure": {"value": false}
+    }
+  }
+}

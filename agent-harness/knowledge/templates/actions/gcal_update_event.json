@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-calendar",
+    "action": "update_event",
+    "displayName": "Update Event",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "title": "Test Title",
+      "colorId": "1",
+      "eventId": "test_event_id",
+      "location": "Test Location",
+      "attendees": [],
+      "calendar_id": "primary",
+      "description": "Test description",
+      "end_date_time": "2026-01-01T01:00:00.000Z",
+      "start_date_time": "2026-01-01T00:00:00.000Z",
+      "guests_can_modify": false,
+      "guests_can_invite_others": false,
+      "guests_can_see_other_guests": false
+    },
+    "pieceName": "@activepieces/piece-google-calendar",
+    "actionName": "update_event",
+    "pieceVersion": "~0.9.0",
+    "propertySettings": {
+      "title": {
+        "type": "MANUAL"
+      },
+      "colorId": {
+        "type": "MANUAL"
+      },
+      "eventId": {
+        "type": "MANUAL"
+      },
+      "location": {
+        "type": "MANUAL"
+      },
+      "attendees": {
+        "type": "MANUAL"
+      },
+      "calendar_id": {
+        "type": "MANUAL"
+      },
+      "description": {
+        "type": "MANUAL"
+      },
+      "end_date_time": {
+        "type": "MANUAL"
+      },
+      "start_date_time": {
+        "type": "MANUAL"
+      },
+      "guests_can_modify": {
+        "type": "MANUAL"
+      },
+      "guests_can_invite_others": {
+        "type": "MANUAL"
+      },
+      "guests_can_see_other_guests": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}

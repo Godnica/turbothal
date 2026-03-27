@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "piece": "@activepieces/piece-google-sheets",
+    "action": "find_spreadsheets",
+    "displayName": "Find Spreadsheet(s)",
+    "tested": true,
+    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+  },
+  "settings": {
+    "input": {
+      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "exact_match": false,
+      "spreadsheet_name": "test",
+      "includeTeamDrives": false
+    },
+    "pieceName": "@activepieces/piece-google-sheets",
+    "actionName": "find_spreadsheets",
+    "pieceVersion": "~0.14.0",
+    "propertySettings": {
+      "exact_match": {
+        "type": "MANUAL"
+      },
+      "spreadsheet_name": {
+        "type": "MANUAL"
+      },
+      "includeTeamDrives": {
+        "type": "MANUAL"
+      }
+    },
+    "errorHandlingOptions": {
+      "retryOnFailure": {
+        "value": false
+      },
+      "continueOnFailure": {
+        "value": false
+      }
+    }
+  }
+}
