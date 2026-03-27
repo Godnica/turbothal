@@ -4,11 +4,11 @@
     "action": "create_new_gdrive_file",
     "displayName": "Create new file",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "text": "Test text content",
       "fileName": "test_file.txt",
       "fileType": "text/plain",

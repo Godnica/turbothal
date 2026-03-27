@@ -4,11 +4,11 @@
     "action": "trash_gdrive_file",
     "displayName": "Trash file",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "fileId": "test_file_id",
       "include_team_drives": false
     },

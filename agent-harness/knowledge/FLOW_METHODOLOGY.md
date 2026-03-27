@@ -22,8 +22,9 @@ TOKEN=$(get_token)
 Variabili da avere sempre pronte:
 ```bash
 API="http://localhost:8080/api/v1"
-PROJECT_ID="ctxq6E1nbcME4wTgkD5Qe"
-CONN_GOOGLE="IHIrEa1Ae8cwPTxl8HT5V"   # OAuth Google (Gmail, Sheets, Drive, Calendar, Contacts)
+PROJECT_ID=$(python3 -c "import tomllib; d=tomllib.load(open('$HOME/.config/activepieces/config.toml','rb')); print(d['default']['project_id'])")
+CONN_GOOGLE=$(curl -s "$API/app-connections?pieceName=%40activepieces%2Fpiece-gmail&projectId=$PROJECT_ID&limit=1" \
+  -H "Authorization: Bearer $TOKEN" | python3 -c "import sys,json; print(json.load(sys.stdin)['data'][0]['externalId'])")
 CONN_POSTGRES="postgres-local-conn"    # PostgreSQL locale
 ```
 

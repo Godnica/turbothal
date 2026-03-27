@@ -5,7 +5,7 @@
     "displayName": "Add Attendees to Event",
     "tested": true,
     "note": "attendees must be array of email strings, not objects",
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "pieceName": "@activepieces/piece-google-calendar",
@@ -14,7 +14,7 @@
     "packageType": "REGISTRY",
     "actionName": "google-calendar-add-attendees",
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "calendar_id": "primary",
       "eventId": "EVENT_ID_HERE",
       "attendees": [

@@ -4,11 +4,11 @@
     "action": "create-column",
     "displayName": "Create Spreadsheet Column",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "sheetId": "0",
       "columnName": "Test Column",
       "columnIndex": 1,

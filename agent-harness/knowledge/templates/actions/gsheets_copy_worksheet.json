@@ -4,11 +4,11 @@
     "action": "copy-worksheet",
     "displayName": "Copy Worksheet",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "sheetId": "0",
       "spreadsheetId": "test_spreadsheet_id",
       "includeTeamDrives": false,

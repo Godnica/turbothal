@@ -4,11 +4,11 @@
     "action": "export_sheet",
     "displayName": "Export Worksheet",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "format": "csv",
       "sheetId": "0",
       "returnAsText": false,

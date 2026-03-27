@@ -4,11 +4,11 @@
     "action": "google-sheets-insert-multiple-rows",
     "displayName": "Add Multiple Rows",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "values": {},
       "sheetId": "0",
       "as_string": false,

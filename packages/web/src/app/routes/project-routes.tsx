@@ -18,6 +18,11 @@ import { AutomationsPage } from './automations';
 const FlowBuilderPage = React.lazy(() =>
   import('./flows/id').then((m) => ({ default: m.FlowBuilderPage })),
 );
+const FlowAgentPage = React.lazy(() =>
+  import('@/features/flow-agent/flow-agent-page').then((m) => ({
+    default: m.FlowAgentPage,
+  })),
+);
 const AnalyticsPage = React.lazy(() => import('./impact'));
 const LeaderboardPage = React.lazy(() => import('./leaderboard'));
 const ProjectReleasesPage = React.lazy(() =>
@@ -189,6 +194,18 @@ export const projectRoutes = [
     element: (
       <ProjectDashboardLayout>
         <SettingsRerouter></SettingsRerouter>
+      </ProjectDashboardLayout>
+    ),
+  }),
+  ...ProjectRouterWrapper({
+    path: routesThatRequireProjectId.flowAgent,
+    element: (
+      <ProjectDashboardLayout>
+        <PageTitle title="Flow Agent">
+          <SuspenseWrapper>
+            <FlowAgentPage />
+          </SuspenseWrapper>
+        </PageTitle>
       </ProjectDashboardLayout>
     ),
   }),

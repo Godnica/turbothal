@@ -7,6 +7,7 @@ import { BoxIcon } from '@/components/icons/box';
 import { ConnectIcon } from '@/components/icons/connect';
 import { HistoryIcon } from '@/components/icons/history';
 import { WorkflowIcon } from '@/components/icons/workflow';
+import { BotIcon } from 'lucide-react';
 import { useEmbedding } from '@/components/providers/embed-provider';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -71,6 +72,13 @@ export const ProjectDashboardLayoutHeader = () => {
       icon: WorkflowIcon,
       hasPermission: checkAccess(Permission.READ_FLOW),
       show: true,
+    },
+    {
+      to: authenticationSession.appendProjectRoutePrefix('/flow-agent'),
+      label: t('Flow Agent'),
+      icon: BotIcon,
+      hasPermission: true,
+      show: !isEmbedded,
     },
   ];
 

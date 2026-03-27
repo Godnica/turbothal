@@ -4,11 +4,11 @@
     "action": "google_calendar_get_event_by_id",
     "displayName": "Get Event by ID",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "event_id": "test_event_id",
       "time_zone": "test_value",
       "calendar_id": "primary",

@@ -15,6 +15,7 @@ export const routesThatRequireProjectId = {
   settings: '/settings',
   releases: '/releases',
   singleRelease: '/releases/:releaseId',
+  flowAgent: '/flow-agent',
 };
 
 export const determineDefaultRoute = (

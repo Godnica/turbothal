@@ -4,11 +4,11 @@
     "action": "duplicate_file",
     "displayName": "Duplicate File",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "name": "Test Name",
       "fileId": "test_file_id",
       "folderId": "test_folder_id",

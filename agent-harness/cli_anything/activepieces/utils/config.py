@@ -65,16 +65,22 @@ def resolve_config(cli_api_url=None, cli_api_key=None, cli_project_id=None, prof
             or os.environ.get("AP_PROJECT_ID")
             or file_cfg.get("project_id", "")
         ),
+        "email": os.environ.get("AP_EMAIL") or file_cfg.get("email", ""),
+        "password": os.environ.get("AP_PASSWORD") or file_cfg.get("password", ""),
     }
 
 
-def init_config(api_url: str, api_key: str, project_id: str = "") -> None:
+def init_config(api_url: str, api_key: str, project_id: str = "", email: str = "", password: str = "") -> None:
     cfg = _load_config()
     cfg.setdefault("default", {})
     cfg["default"]["api_url"] = api_url
     cfg["default"]["api_key"] = api_key
     if project_id:
         cfg["default"]["project_id"] = project_id
+    if email:
+        cfg["default"]["email"] = email
+    if password:
+        cfg["default"]["password"] = password
     _save_config(cfg)
 
 

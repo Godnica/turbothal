@@ -4,11 +4,11 @@
     "action": "save_file_as_pdf",
     "displayName": "Save Document as PDF",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "name": "Test Name",
       "folderId": "test_folder_id",
       "documentId": "test_doc_id",

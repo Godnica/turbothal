@@ -4,11 +4,11 @@
     "action": "get_next_rows",
     "displayName": "Get next row(s)",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "memKey": "test_key",
       "sheetId": "0",
       "startRow": 1,

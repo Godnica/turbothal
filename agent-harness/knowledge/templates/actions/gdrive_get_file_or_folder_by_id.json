@@ -4,12 +4,12 @@
     "action": "get-file-or-folder-by-id",
     "displayName": "Get File Information",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
       "id": "test_id",
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "include_team_drives": false
     },
     "pieceName": "@activepieces/piece-google-drive",

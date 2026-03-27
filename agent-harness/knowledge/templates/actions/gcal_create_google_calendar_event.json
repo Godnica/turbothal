@@ -4,11 +4,11 @@
     "action": "create_google_calendar_event",
     "displayName": "Create Event",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "title": "Test Title",
       "colorId": "1",
       "location": "Test Location",

@@ -4,11 +4,11 @@
     "action": "delete_event",
     "displayName": "Delete Event",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "eventId": "test_event_id",
       "calendar_id": "primary"
     },

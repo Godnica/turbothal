@@ -4,11 +4,11 @@
     "action": "find_rows",
     "displayName": "Find Rows",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "sheetId": "0",
       "headerRow": 1,
       "matchCase": false,

@@ -6,8 +6,11 @@ API="http://localhost:8080/api/v1"
 PROJECT_ID="ctxq6E1nbcME4wTgkD5Qe"
 
 get_token() {
+  local cfg="$HOME/.config/activepieces/config.toml"
+  local email=$(python3 -c "import tomllib; d=tomllib.load(open('$cfg','rb')); print(d['default']['email'])")
+  local password=$(python3 -c "import tomllib; d=tomllib.load(open('$cfg','rb')); print(d['default']['password'])")
   TOKEN=$(curl -s -X POST "$API/authentication/sign-in" -H 'Content-Type: application/json' \
-    -d '{"email":"simonemiticonicastri@gmail.com","password":"Pass123!"}' | python3 -c "import sys,json; print(json.load(sys.stdin)['token'])")
+    -d "{\"email\":\"$email\",\"password\":\"$password\"}" | python3 -c "import sys,json; print(json.load(sys.stdin)['token'])")
   echo "$TOKEN"
 }
 

@@ -4,11 +4,11 @@
     "action": "google_calendar_get_events",
     "displayName": "Get all Events",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "search": "test_value",
       "end_date": "2026-01-01T01:00:00.000Z",
       "start_date": "2026-01-01T00:00:00.000Z",

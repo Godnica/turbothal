@@ -2,8 +2,8 @@
 
 **Obiettivo**: Creare e testare template JSON per ogni trigger/azione dei principali connettori.
 **Dove salvarli**: `knowledge/templates/triggers/` e `knowledge/templates/actions/`
-**Email mittente**: simonemiticonicastri@gmail.com
-**Email ricevente**: nicastrisimo@gmail.com
+**Email mittente**: account Google autenticato via OAuth (determinato dalla connessione dell'utente loggato)
+**Email ricevente**: da specificare nel flow
 
 ---
 
@@ -90,8 +90,8 @@
 
 ## 4. EMAIL — Gmail, SMTP, IMAP
 
-**Mittente**: simonemiticonicastri@gmail.com
-**Ricevente**: nicastrisimo@gmail.com
+**Mittente**: account Google autenticato via OAuth
+**Ricevente**: da specificare nel flow
 
 ### Trigger
 
@@ -122,7 +122,7 @@
 
 ## 5. GOOGLE WORKSPACE — Sheets, Drive, Calendar, Contacts
 
-**OAuth Google configurato** — Connection ID: `IHIrEa1Ae8cwPTxl8HT5V` (condivisa tra tutti i piece Google)
+**OAuth Google configurato** — Connection ID: recuperato dinamicamente via API (`/app-connections?pieceName=@activepieces/piece-gmail`)
 
 ### Google Sheets (v0.14.6) — 21 azioni ✅ + 4 trigger ✅
 

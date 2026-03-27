@@ -4,11 +4,11 @@
     "action": "get-many-rows",
     "displayName": "Get All Rows",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "sheetId": "0",
       "spreadsheetId": "test_spreadsheet_id",
       "first_row_headers": true,

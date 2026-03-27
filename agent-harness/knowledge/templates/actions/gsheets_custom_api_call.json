@@ -5,7 +5,7 @@
     "displayName": "Custom API Call",
     "tested": true,
     "note": "url must be dict {'url': '...'} not plain string",
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "pieceName": "@activepieces/piece-google-sheets",
@@ -14,7 +14,7 @@
     "packageType": "REGISTRY",
     "actionName": "custom_api_call",
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "url": {
         "url": "https://sheets.googleapis.com/v4/spreadsheets"
       },

@@ -449,6 +449,9 @@ Il trigger usa `mailparser` internamente e restituisce:
 | Oggetto | `{{trigger.message.subject}}` | Oggetto dell'email |
 | Message-ID RFC 2822 | `{{trigger.message.messageId}}` | Per `in_reply_to` in send_email |
 | Mittente (full) | `{{trigger.message.from.text}}` | Es. "Nome <email@gmail.com>" |
+| Indirizzo mittente | `{{trigger.message.from.value.0.address}}` | Solo l'indirizzo email |
+
+> **Nota mittente in send_email**: il campo `from` va lasciato `""`. Gmail usa automaticamente l'email dell'account Google autenticato via OAuth (`{{connections['CONNECTION_EXTERNAL_ID']}}`). Non hardcodare mai un indirizzo email nel campo `from`.
 
 ### Come fare reply a un'email Gmail
 
@@ -483,7 +486,7 @@ TOKEN=$(get_token)
 curl -s "$API/flows" -H "Authorization: Bearer $TOKEN"
 ```
 
-Credenziali: `simonemiticonicastri@gmail.com` / `Pass123!`
+Le credenziali si trovano in `~/.config/activepieces/config.toml` o in `test_helper.sh`.
 Project ID: `ctxq6E1nbcME4wTgkD5Qe`
 
 ---

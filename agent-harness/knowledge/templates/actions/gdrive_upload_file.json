@@ -5,7 +5,7 @@
     "displayName": "Upload file",
     "tested": true,
     "note": "file field needs a file reference (URL or base64 data URI)",
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "pieceName": "@activepieces/piece-google-drive",
@@ -14,7 +14,7 @@
     "packageType": "REGISTRY",
     "actionName": "upload_gdrive_file",
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "fileName": "uploaded_file.txt",
       "file": "https://example.com/file.txt",
       "parentFolder": "",

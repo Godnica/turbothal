@@ -4,11 +4,11 @@
     "action": "update_contact",
     "displayName": "Update Contact",
     "tested": true,
-    "connection": "IHIrEa1Ae8cwPTxl8HT5V"
+    "connection": "CONNECTION_EXTERNAL_ID"
   },
   "settings": {
     "input": {
-      "auth": "{{connections['IHIrEa1Ae8cwPTxl8HT5V']}}",
+      "auth": "{{connections['CONNECTION_EXTERNAL_ID']}}",
       "etag": "test_etag",
       "email": "test_value",
       "company": "test_value",
